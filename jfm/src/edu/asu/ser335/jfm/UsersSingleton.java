@@ -108,6 +108,7 @@ public final class UsersSingleton {
 		return rval;
 	}
 	
+	// TASK H3 START
 	public static final boolean updatePasswordMapping(String userName, String newPassword) throws Exception {
 		boolean rval = true;
 		
@@ -141,6 +142,7 @@ public final class UsersSingleton {
 		
 		return rval;
 	}
+	// TASK H3 END
 
 	// loads authentication.json and create userPasswordMapping and userRoleMapping
 	private static final void loadUsers() {

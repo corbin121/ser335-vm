@@ -176,9 +176,11 @@ public class MainPanel extends JPanel {
 	AddUserAction addUser = new AddUserAction();
 	addNewUser.addActionListener(addUser);
 	
+	// TASK H2 START
 	JButton changePwdButton = new JButton("Change Password");
 	ChangePasswordAction changePwdAction = new ChangePasswordAction();
 	changePwdButton.addActionListener(changePwdAction);
+	// TASK H2 END
 
 	JButton f10Button = new JButton("Quit");
 	QuitAction quit = new QuitAction();
@@ -204,6 +206,7 @@ public class MainPanel extends JPanel {
 	for (int i = 0; rpm != null && i < rpm.length; i++) {
 	    System.out.println("Privileges for " + userRole + " role: " + rpm[i] + i);
 			
+		// TASK H2 START
 	    String privileges = rpm[i];
 	    
 	    if (privileges.equals(CommonConstants.VIEW_ACTION)) {
@@ -224,9 +227,14 @@ public class MainPanel extends JPanel {
 	    if (privileges.equals(CommonConstants.ADDUSER_ACTION)) {
 	    	buttons.addElement(addNewUser);
 	    }
+		// TASK H2 END
+
+		// TASK H3 START
 	    if (privileges.equals(CommonConstants.CHANGE_PASSWORD_ACTION)) {
 	    	buttons.addElement(changePwdButton);
 	    }
+		// TASK H3 END
+
 	}		
 	buttons.addElement(f10Button);    //Quit Button, for everyone
 	buttons.addElement(logoutButton); //Logout Button, for everyone

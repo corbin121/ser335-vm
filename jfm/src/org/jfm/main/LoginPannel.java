@@ -157,7 +157,7 @@ public class LoginPannel extends JFrame implements ActionListener {
 	// Login Validation
 	public boolean validateUser(String uName, String pwd, String role) {
 		
-		// SER335 TODO: Implement your validation code here.
+		// TASK H1 START
 		try {
 			RolesSingleton rolesSingleton = RolesSingleton.getRoleMapping();
 			SaltsSingleton saltsSingleton = SaltsSingleton.getUserSalts();
@@ -201,5 +201,7 @@ public class LoginPannel extends JFrame implements ActionListener {
 			e.printStackTrace();
 			return false;
 		}
+
+		// TASK H1 END
 	}
 }

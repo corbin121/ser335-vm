@@ -117,7 +117,7 @@ public class ChangePasswordPannel extends JFrame implements ActionListener {
 		String password = String.valueOf(fieldPassword.getPassword());
 		String role = (String) roleList.getSelectedItem();
 		
-		// TODO: for you to complete!
+		// TASK H3 START
 		if (userName.isEmpty() || password.isEmpty() || role.isEmpty()) {
 			JOptionPane.showMessageDialog(this, "All fields are required.");
 			return;
@@ -147,6 +147,7 @@ public class ChangePasswordPannel extends JFrame implements ActionListener {
 			ex.printStackTrace();
 			return;
 		}
+		// TASK H3 END
 	}
 
 }
